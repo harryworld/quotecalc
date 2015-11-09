@@ -1,0 +1,15 @@
+<template name="header">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="row">
+      <a id="back" class="navbar-brand">&lt; Back</a>
+      <a id="home" href="{{pathFor 'home'}}">Home</a>
+      <p class="navbar-title navbar-text">{{title}}</p>
+      <div class="navbar-text pull-right">
+        <div>Cost to Make an App</div>
+        <div>Price: ${{total}}</div>
+      </div>
+    </div>
+  </div>
+</nav>
+</template>

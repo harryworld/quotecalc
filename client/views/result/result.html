@@ -1,0 +1,46 @@
+<template name="result">
+  <div class="home">
+    <h1>Your app estimate</h1>
+    <div>$40,000</div>
+    <a href="/breakdown">Show Breakdown</a>
+    <div class="breakdown">
+      <ul>
+        <li>
+          <div>What type of app are you building?</div>
+          <div>{{appType}}</div>
+        </li>
+        <li>
+          <div>Do people have to login?</div>
+          <div>{{login}}</div>
+        </li>
+        <li>
+          <div>Do people create personal profiles?</div>
+          <div>{{profile}}</div>
+        </li>
+        <li>
+          <div>How will you make money from your app?</div>
+          <div>{{payment}}</div>
+        </li>
+        <li>
+          <div>Do people rate or review things?</div>
+          <div>{{rating}}</div>
+        </li>
+        <li>
+          <div>Does your app need to connect with your website?</div>
+          <div>{{integration}}</div>
+        </li>
+        <li>
+          <div>How nice should your app look?</div>
+          <div>{{design}}</div>
+        </li>
+        <li>
+          <div>Do you need an app icon?</div>
+          <div>{{appicon}}</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <a href="/start">Start with us</a>
+  </div>
+</template>
