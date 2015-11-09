@@ -15,3 +15,5 @@ Template.result.helpers
     Session.get('design')
   appicon: () ->
     Session.get('appicon')
+  total: () ->
+    Session.get('total')

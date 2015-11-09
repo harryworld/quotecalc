@@ -1,13 +1,19 @@
+navigate = () ->
+  if Session.get 'appicon'
+    Router.go 'result'
+  else
+    Router.go 'profile'
+
 Template.login.events
   'click #email': (e, tpl) ->
     e.preventDefault()
     Session.set 'login', 'email'
-    Router.go 'profile'
+    navigate()
   'click #social': (e, tpl) ->
     e.preventDefault()
     Session.set 'login', 'social'
-    Router.go 'profile'
+    navigate()
   'click #no': (e, tpl) ->
     e.preventDefault()
     Session.set 'login', 'no'
-    Router.go 'profile'
+    navigate()

@@ -1,41 +1,41 @@
 <template name="result">
   <div class="home">
     <h1>Your app estimate</h1>
-    <div>$40,000</div>
+    <div>${{total}}</div>
     <a href="/breakdown">Show Breakdown</a>
     <div class="breakdown">
       <ul>
         <li>
           <div>What type of app are you building?</div>
-          <div>{{appType}}</div>
+          <div>{{appType}} (<a href="{{pathFor 'type'}}">Change</a>)</div>
         </li>
         <li>
           <div>Do people have to login?</div>
-          <div>{{login}}</div>
+          <div>{{login}} (<a href="{{pathFor 'login'}}">Change</a>)</div>
         </li>
         <li>
           <div>Do people create personal profiles?</div>
-          <div>{{profile}}</div>
+          <div>{{profile}} (<a href="{{pathFor 'profile'}}">Change</a>)</div>
         </li>
         <li>
           <div>How will you make money from your app?</div>
-          <div>{{payment}}</div>
+          <div>{{payment}} (<a href="{{pathFor 'payment'}}">Change</a>)</div>
         </li>
         <li>
           <div>Do people rate or review things?</div>
-          <div>{{rating}}</div>
+          <div>{{rating}} (<a href="{{pathFor 'rating'}}">Change</a>)</div>
         </li>
         <li>
           <div>Does your app need to connect with your website?</div>
-          <div>{{integration}}</div>
+          <div>{{integration}} (<a href="{{pathFor 'integration'}}">Change</a>)</div>
         </li>
         <li>
           <div>How nice should your app look?</div>
-          <div>{{design}}</div>
+          <div>{{design}} (<a href="{{pathFor 'design'}}">Change</a>)</div>
         </li>
         <li>
           <div>Do you need an app icon?</div>
-          <div>{{appicon}}</div>
+          <div>{{appicon}} (<a href="{{pathFor 'appicon'}}">Change</a>)</div>
         </li>
       </ul>
     </div>
