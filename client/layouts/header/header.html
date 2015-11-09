@@ -1,12 +1,14 @@
 <template name="header">
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="row">
+<nav>
+  <div class="row">
+    <div class="small-3 columns">
       <a id="start-over" class="navbar-brand" href="{{pathFor 'home'}}">&lt; Start Over</a>
-      <div class="navbar-text pull-right">
-        <div>Cost to Make an App</div>
-        <div>Price: ${{total}}</div>
-      </div>
+    </div>
+    <div class="small-6 columns text-center">
+      Cost to Make an App
+    </div>
+    <div class="small-3 columns text-right">
+      Price: ${{total}}
     </div>
   </div>
 </nav>
