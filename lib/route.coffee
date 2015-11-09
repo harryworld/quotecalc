@@ -30,9 +30,10 @@ Router.route '/design',
 Router.route '/appicon',
   name: 'appicon'
 
-Router.route '/result',
+Router.route '/calc',
+  name: 'calc'
+
+Router.route '/results/:_id',
   name: 'result'
-
-Router.route '/breakdown',
-  name: 'breakdown'
-
+  data: ->
+    Choices.findOne(@params._id)
