@@ -1,6 +1,6 @@
 navigate = () ->
   if Session.get 'appicon'
-    Router.go 'result'
+    Router.go 'result', {_id: Session.get('resultId')}
   else
     Router.go 'login'
 

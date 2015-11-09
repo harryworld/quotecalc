@@ -1,12 +1,39 @@
 <template name="home">
-  {{> main}}
-  {{> type}}
+  <div id="fullpage">
+    <div class="section">
+      {{> homepage}}
+    </div>
+    <div class="section">
+      {{> type}}
+    </div>
+    <div class="section">
+      {{> login}}
+    </div>
+    <div class="section">
+      {{> profile}}
+    </div>
+    <div class="section">
+      {{> payment}}
+    </div>
+    <div class="section">
+      {{> rating}}
+    </div>
+    <div class="section">
+      {{> integration}}
+    </div>
+    <div class="section">
+      {{> design}}
+    </div>
+    <div class="section">
+      {{> appicon}}
+    </div>
+  </div>
 </template>
 
-<template name="main">
-  <div class="home">
+<template name="homepage">
+  <div class="text-center">
     <h1>COST TO MAKE AN APP</h1>
     <div>Easily calculate the cost of a mobile application using this handy tool.</div>
-    <a href="/type" class="button radius">Get Started</a>
+    <a class="button radius">Get Started</a>
   </div>
 </template>
