@@ -1,8 +1,10 @@
 @import "./settings";
 @import ".meteor/local/build/programs/server/assets/packages/matthew_foundation5-sass/foundation";
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
 
 body {
   background-color: #F5F5F5;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .section {
