@@ -94,12 +94,12 @@ Template.result.helpers
     else
       'DontKnow'
   design: ->
-    switch @payment
+    switch @design
       when 'barebone' then 'Bare-bones'
       when 'stock' then 'Stock'
       when 'beautiful' then 'Beautiful'
   designImage: ->
-    switch @payment
+    switch @design
       when 'barebone' then 'BareBones'
       when 'stock' then 'Stock'
       when 'beautiful' then 'Beautiful'
