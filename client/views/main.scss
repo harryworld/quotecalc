@@ -12,3 +12,9 @@ body {
 .button.red {
   background-color: #E96969;
 }
+
+.columns {
+  div, img {
+    cursor: pointer;
+  }
+}
