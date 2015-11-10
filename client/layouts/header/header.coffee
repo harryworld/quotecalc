@@ -73,3 +73,4 @@ Template.header.events
       design: undefined
       appicon: undefined
       total: 0
+      resultId: undefined
