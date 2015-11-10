@@ -1,7 +1,16 @@
+navigate = () ->
+  if Session.get 'resultId'
+    Router.go 'result', {_id: Session.get('resultId')}
+  else
+    Router.go 'appicon'
+
 Template.design.events
-  'click #barebone': (e, tpl) ->
+  'click .step-design .barebone': (e, tpl) ->
     Session.set 'design', 'barebone'
-  'click #stock': (e, tpl) ->
+    navigate()
+  'click .step-design .stock': (e, tpl) ->
     Session.set 'design', 'stock'
-  'click #beautiful': (e, tpl) ->
+    navigate()
+  'click .step-design .beautiful': (e, tpl) ->
     Session.set 'design', 'beautiful'
+    navigate()

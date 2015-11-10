@@ -1,11 +1,16 @@
+navigate = () ->
+  if Session.get 'resultId'
+    Router.go 'result', {_id: Session.get('resultId')}
+  else
+    Router.go 'design'
+
 Template.integration.events
-  'click #yes': (e, tpl) ->
-    e.preventDefault()
+  'click .step-integration .yes': (e, tpl) ->
     Session.set 'integration', true
-    Router.go 'design'
-  'click #no': (e, tpl) ->
-    e.preventDefault()
+    navigate()
+  'click .step-integration .no': (e, tpl) ->
     Session.set 'integration', false
-    Router.go 'design'
-  'click #unknown': (e, tpl) ->
+    navigate()
+  'click .step-integration .unknown': (e, tpl) ->
     Session.set 'integration', undefined
+    navigate()

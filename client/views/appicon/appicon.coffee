@@ -1,7 +1,7 @@
 Template.appicon.events
-  'click #yes': (e, tpl) ->
+  'click .step-appicon .yes': (e, tpl) ->
     Session.set 'appicon', true
-  'click #no': (e, tpl) ->
+  'click .step-appicon .no': (e, tpl) ->
     Session.set 'appicon', false
-  'click #unknown': (e, tpl) ->
+  'click .step-appicon .unknown': (e, tpl) ->
     Session.set 'appicon', undefined

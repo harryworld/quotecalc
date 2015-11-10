@@ -1,7 +1,16 @@
+navigate = () ->
+  if Session.get 'resultId'
+    Router.go 'result', {_id: Session.get('resultId')}
+  else
+    Router.go 'payment'
+
 Template.profile.events
-  'click #yes': (e, tpl) ->
+  'click .step-profile .yes': (e, tpl) ->
     Session.set 'profile', true
-  'click #no': (e, tpl) ->
+    navigate()
+  'click .step-profile .no': (e, tpl) ->
     Session.set 'profile', false
-  'click #unknown': (e, tpl) ->
+    navigate()
+  'click .step-profile .unknown': (e, tpl) ->
     Session.set 'profile', undefined
+    navigate()
