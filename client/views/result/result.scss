@@ -1,0 +1,45 @@
+.result {
+  > div {
+    background-color: white;
+    border-radius: 6px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  h1.price {
+    color: #417505;
+  }
+
+  .columns {
+    div, img {
+      cursor: auto;
+    }
+  }
+}
+
+.breakdown {
+  // display: none;
+  cursor: default;
+
+  img {
+    width: 60px;
+  }
+
+  .row {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  .text-left {
+    border-bottom: 1px solid #EBEBEB;
+    height: 5em;
+  }
+}
+
+.call-to-action {
+  margin-top: 30px;
+
+  div {
+    margin-bottom: 30px;
+  }
+}

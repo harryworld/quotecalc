@@ -2,48 +2,93 @@
 </template>
 
 <template name="result">
-  <div class="home">
+<div class="result section row">
+  <div class="small-6 small-centered columns">
     <h1>Your app estimate</h1>
-    <div>${{total}}</div>
-    <a href="/breakdown">Show Breakdown</a>
+    <h1 class="price">${{total}}</h1>
+    <a id="breakdown" href="#">Show Breakdown</a>
     <div class="breakdown">
-      <ul>
-        <li>
-          <div>What type of app are you building?</div>
+      <div class="row">
+        <div class="small-3 columns text-center">
+          <img class="ios" src="/images/{{typeImage}}.png" />
+        </div>
+        <div class="small-9 columns text-left">
+          <div class="subheader">What type of app are you building?</div>
           <div>{{type}} (<a href="{{pathFor 'type'}}">Change</a>)</div>
-        </li>
-        <li>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-3 columns text-center">
+          <img class="ios" src="/images/{{loginImage}}.png" />
+        </div>
+        <div class="small-9 columns text-left">
           <div>Do people have to login?</div>
           <div>{{login}} (<a href="{{pathFor 'login'}}">Change</a>)</div>
-        </li>
-        <li>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-3 columns text-center">
+          <img class="ios" src="/images/{{profileImage}}.png" />
+        </div>
+        <div class="small-9 columns text-left">
           <div>Do people create personal profiles?</div>
           <div>{{profile}} (<a href="{{pathFor 'profile'}}">Change</a>)</div>
-        </li>
-        <li>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-3 columns text-center">
+          <img class="ios" src="/images/{{paymentImage}}.png" />
+        </div>
+        <div class="small-9 columns text-left">
           <div>How will you make money from your app?</div>
           <div>{{payment}} (<a href="{{pathFor 'payment'}}">Change</a>)</div>
-        </li>
-        <li>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-3 columns text-center">
+          <img class="ios" src="/images/{{ratingImage}}.png" />
+        </div>
+        <div class="small-9 columns text-left">
           <div>Do people rate or review things?</div>
           <div>{{rating}} (<a href="{{pathFor 'rating'}}">Change</a>)</div>
-        </li>
-        <li>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-3 columns text-center">
+          <img class="ios" src="/images/{{integrationImage}}.png" />
+        </div>
+        <div class="small-9 columns text-left">
           <div>Does your app need to connect with your website?</div>
           <div>{{integration}} (<a href="{{pathFor 'integration'}}">Change</a>)</div>
-        </li>
-        <li>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-3 columns text-center">
+          <img class="ios" src="/images/{{designImage}}.png" />
+        </div>
+        <div class="small-9 columns text-left">
           <div>How nice should your app look?</div>
           <div>{{design}} (<a href="{{pathFor 'design'}}">Change</a>)</div>
-        </li>
-        <li>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-3 columns text-center">
+          <img class="ios" src="/images/{{appiconImage}}.png" />
+        </div>
+        <div class="small-9 columns text-left">
           <div>Do you need an app icon?</div>
           <div>{{appicon}} (<a href="{{pathFor 'appicon'}}">Change</a>)</div>
-        </li>
-      </ul>
+        </div>
+      </div>
+    </div>
+    <div class="call-to-action">
+      <div>
+        At Mind Fund Studio, we have a team of dedicated app developers…example work…
+      </div>
+      <div>
+        <a href="/start" class="red button radius">START PROJECT WITH US <i class="fa fa-arrow-right"></i></a>
+      </div>
     </div>
   </div>
-  <div>
-    <a href="/start">Start with us</a>
-  </div>
+</div>
 </template>
