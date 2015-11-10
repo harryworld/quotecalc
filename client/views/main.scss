@@ -1,6 +1,14 @@
 @import "./settings";
 @import ".meteor/local/build/programs/server/assets/packages/matthew_foundation5-sass/foundation";
 
+body {
+  background-color: #F5F5F5;
+}
+
 .section {
   text-align: center !important;
+}
+
+.button.red {
+  background-color: #E96969;
 }
