@@ -39,3 +39,11 @@ Router.route '/results/:_id',
   data: ->
     Session.set 'resultId', @params._id
     Choices.findOne(@params._id)
+
+Router.route '/contact',
+  name: 'contact'
+  layoutTemplate: 'ResultLayout'
+
+Router.route '/success',
+  name: 'success',
+  layoutTemplate: 'ResultLayout'

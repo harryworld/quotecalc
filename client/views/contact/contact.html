@@ -1,0 +1,82 @@
+<template name="contact">
+<form class="contact row">
+  <div class="row">
+    <div class="small-8 columns">
+      <h1>Start Your Project</h1>
+      <div>Tell us more about your project. We are honoured to provide your a FREE review</div>
+    </div>
+    <div class="small-4 columns">
+      <div>Your Estimated Budget</div>
+      <div>${{total}} USD</div>
+    </div>
+  </div>
+  <hr/>
+  <div class="row">
+    <div class="small-6 columns">
+      <label>I want work done on my
+        <input type="text" name="title" />
+      </label>
+    </div>
+    <div class="small-6 columns">
+      <div class="row collapse">
+        <label>For around</label>
+        <div class="small-1 columns"><span class="prefix">$</span></div>
+        <div class="small-8 columns">
+          <input type="text" name="budget" />
+        </div>
+        <div class="small-3 columns">
+          <span class="postfix">USD</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 columns">
+      <label>
+        <h2>Tell us about your project</h2>
+        <div>Include a link to your existing site or app if you have one. The more details we have about your project, the easier it is to match you with the right designer or developer.</div>
+        <textarea name="detail"></textarea>
+      </label>
+    </div>
+  </div>
+  <hr/>
+  <div class="row">
+    <div class="small-12 columns">
+      <h1>And a bit about yourself</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-6 columns">
+      <label>First Name
+        <input type="text" name="first_name" />
+      </label>
+    </div>
+    <div class="small-6 columns">
+      <label>Last Name
+        <input type="text" name="last_name" />
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 columns">
+      <label>Email
+        <input type="text" name="email" />
+      </label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 columns">
+      <input type="submit" class="red button radius expand" value="Get Started" />
+    </div>
+  </div>
+</form>
+</template>
+
+<template name="success">
+<div class="success row">
+  <h1>Project Plan Submitted</h1>
+  <div class="message">
+    We wish you a great success. Our developer evangelist will contact you within 24 hours.
+  </div>
+</div>
+</template>
