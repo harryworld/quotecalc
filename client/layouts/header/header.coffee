@@ -79,4 +79,6 @@ Template.header.events
       total: 0
       resultId: undefined
 
+Template.header_home.events
+  'click #start-over': (e, tpl) ->
     $.fn.fullpage.silentMoveTo('home')

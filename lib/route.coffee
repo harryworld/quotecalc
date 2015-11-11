@@ -5,6 +5,7 @@ Router.configure
 
 Router.route '/',
   name: 'home'
+  layoutTemplate: 'HomeLayout'
 
 Router.route '/type',
   name: 'type'

@@ -1,4 +1,7 @@
 .result {
+  padding: 15% 0;
+  text-align: center !important;
+
   > div {
     background-color: white;
     border-radius: 6px;
@@ -18,7 +21,7 @@
 }
 
 .breakdown {
-  // display: none;
+  display: none;
   cursor: default;
 
   img {
