@@ -1,6 +1,15 @@
 Template.home.rendered = ->
   $('#fullpage').fullpage
     anchors: ['home', 'type', 'login', 'profile', 'payment', 'rating', 'integration', 'design', 'appicon']
+    keyboardScrolling: false
+    onLeave: (index, nextIndex, direction) ->
+      if index <= 8 and direction == 'down'
+        progress = index * 100 / 8
+        $('.progress .meter').animate({width: progress + '%'})
+    afterLoad: (anchorLink, index) ->
+      if anchorLink == 'home'
+        $('.progress .meter').animate({width: '3%'})
+
   $.fn.fullpage.setAllowScrolling(false)
 
 Template.home.events
