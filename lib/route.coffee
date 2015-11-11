@@ -35,6 +35,7 @@ Router.route '/calc',
 
 Router.route '/results/:_id',
   name: 'result'
+  layoutTemplate: 'ResultLayout'
   data: ->
     Session.set 'resultId', @params._id
     Choices.findOne(@params._id)

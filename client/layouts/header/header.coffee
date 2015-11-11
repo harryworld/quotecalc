@@ -58,6 +58,10 @@ Template.header.helpers
       total
 
     Session.set 'total', total
+    if Session.get 'resultId'
+      Choices.update(Session.get('resultId'), {$set: {total: Session.get 'total'}}, (error) ->
+        console.log error.reason if error
+      );
 
     total
 

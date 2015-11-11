@@ -1,5 +1,8 @@
 navigate = () ->
   if Session.get 'resultId'
+    Choices.update(Session.get('resultId'), {$set: {design: Session.get 'design'}}, (error) ->
+      console.log error.reason if error
+    );
     Router.go 'result', {_id: Session.get('resultId')}
   else
     Router.go 'appicon'
