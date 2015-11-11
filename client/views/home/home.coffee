@@ -1,6 +1,7 @@
 Template.home.rendered = ->
   $('#fullpage').fullpage
     anchors: ['home', 'type', 'login', 'profile', 'payment', 'rating', 'integration', 'design', 'appicon']
+  $.fn.fullpage.setAllowScrolling(false)
 
 Template.home.events
   'click .get-start': (e, tpl) ->

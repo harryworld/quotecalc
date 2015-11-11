@@ -78,3 +78,5 @@ Template.header.events
       appicon: undefined
       total: 0
       resultId: undefined
+
+    $.fn.fullpage.silentMoveTo('home')
