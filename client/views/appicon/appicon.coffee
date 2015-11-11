@@ -7,6 +7,10 @@ navigate = () ->
   else
     Router.go 'calc'
 
+Template.appicon.rendered = ->
+  if $('.master').length
+    $('.progress .meter').animate({width: '100%'})
+
 Template.appicon.events
   'click .step-appicon .yes': (e, tpl) ->
     Session.set 'appicon', true

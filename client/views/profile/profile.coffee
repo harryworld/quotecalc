@@ -7,6 +7,10 @@ navigate = () ->
   else
     Router.go 'payment'
 
+Template.profile.rendered = ->
+  if $('.master').length
+    $('.progress .meter').animate({width: '37.5%'})
+
 Template.profile.events
   'click .step-profile .yes': (e, tpl) ->
     Session.set 'profile', true

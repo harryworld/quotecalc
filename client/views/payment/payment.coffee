@@ -7,6 +7,10 @@ navigate = () ->
   else
     Router.go 'rating'
 
+Template.payment.rendered = ->
+  if $('.master').length
+    $('.progress .meter').animate({width: '50%'})
+
 Template.payment.events
   'click .step-payment .upfront': (e, tpl) ->
     Session.set 'payment', 'upfront'

@@ -7,6 +7,10 @@ navigate = () ->
   else
     Router.go 'design'
 
+Template.integration.rendered = ->
+  if $('.master').length
+    $('.progress .meter').animate({width: '75%'})
+
 Template.integration.events
   'click .step-integration .yes': (e, tpl) ->
     Session.set 'integration', true

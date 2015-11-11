@@ -7,6 +7,10 @@ navigate = () ->
   else
     Router.go 'integration'
 
+Template.rating.rendered = ->
+  if $('.master').length
+    $('.progress .meter').animate({width: '62.5%'})
+
 Template.rating.events
   'click .step-rating .yes': (e, tpl) ->
     Session.set 'rating', true

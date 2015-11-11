@@ -7,6 +7,10 @@ navigate = () ->
   else
     Router.go 'login'
 
+Template.type.rendered = ->
+  if $('.master').length
+    $('.progress .meter').animate({width: '12.5%'})
+
 Template.type.events
   'click .ios': (e, tpl) ->
     Session.set 'type', 'ios'

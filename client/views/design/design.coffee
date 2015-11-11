@@ -7,6 +7,10 @@ navigate = () ->
   else
     Router.go 'appicon'
 
+Template.design.rendered = ->
+  if $('.master').length
+    $('.progress .meter').animate({width: '87.5%'})
+
 Template.design.events
   'click .step-design .barebone': (e, tpl) ->
     Session.set 'design', 'barebone'

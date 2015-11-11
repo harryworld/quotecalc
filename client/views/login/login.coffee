@@ -7,6 +7,10 @@ navigate = () ->
   else
     Router.go 'profile'
 
+Template.login.rendered = ->
+  if $('.master').length
+    $('.progress .meter').animate({width: '25%'})
+
 Template.login.events
   'click .step-login .email': (e, tpl) ->
     e.preventDefault()
