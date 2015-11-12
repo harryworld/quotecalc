@@ -59,6 +59,10 @@
   .content {
     background-color: white;
 
+    .row {
+      margin: 30px auto;
+    }
+
     .message {
       > div {
         background-color: #E0F1CF;
