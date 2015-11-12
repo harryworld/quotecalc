@@ -6,8 +6,10 @@ Template.home.rendered = ->
       if index <= 8 and direction == 'down'
         progress = index * 100 / 8
         $('.progress .meter').animate({width: progress + '%'})
+        $('.header .text-right').show()
     afterLoad: (anchorLink, index) ->
       if anchorLink == 'home'
+        $('.header .text-right').hide()
         $('.progress .meter').animate({width: '3%'})
 
   $.fn.fullpage.setAllowScrolling(false)

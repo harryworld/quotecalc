@@ -15,7 +15,8 @@ Template.calc.rendered = ->
   Router.go 'result', choice
 
 Template.result.rendered = ->
-  $.fn.fullpage.destroy()
+  $('.header .text-right .button').removeClass('hide')
+  $.fn.fullpage.destroy() if $.fn.fullpage.destroy
 
 Template.result.helpers
   type: ->
