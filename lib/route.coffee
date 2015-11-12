@@ -37,6 +37,8 @@ Router.route '/calc',
 Router.route '/results/:_id',
   name: 'result'
   layoutTemplate: 'ResultLayout'
+  waitOn: ->
+    Meteor.subscribe('choices', {_id: @params._id})
   data: ->
     Session.set 'resultId', @params._id
     Choices.findOne(@params._id)

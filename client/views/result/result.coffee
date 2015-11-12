@@ -15,8 +15,19 @@ Template.calc.rendered = ->
   Router.go 'result', choice
 
 Template.result.rendered = ->
-  $('.header .text-right .button').removeClass('hide')
-  $.fn.fullpage.destroy() if $.fn.fullpage.destroy
+  $('.header .estimate').addClass('hide')
+  $('.header .share').removeClass('hide')
+
+  Session.set
+    type: @.data.type
+    login: @.data.login
+    profile: @.data.profile
+    payment: @.data.payment
+    rating: @.data.rating
+    integration: @.data.integration
+    design: @.data.design
+    appicon: @.data.appicon
+    total: @.data.total
 
 Template.result.helpers
   type: ->

@@ -1,4 +1,7 @@
 Template.home.rendered = ->
+  $('.header .estimate').removeClass('hide')
+  $('.header .share').addClass('hide')
+
   $('#fullpage').fullpage
     anchors: ['home', 'type', 'login', 'profile', 'payment', 'rating', 'integration', 'design', 'appicon']
     keyboardScrolling: false
@@ -6,13 +9,18 @@ Template.home.rendered = ->
       if index <= 8 and direction == 'down'
         progress = index * 100 / 8
         $('.progress .meter').animate({width: progress + '%'})
-        $('.header .text-right').show()
+        $('.highlight').show()
+        $('.title').removeClass('small-centered')
     afterLoad: (anchorLink, index) ->
       if anchorLink == 'home'
-        $('.header .text-right').hide()
+        $('.highlight').hide()
+        $('.title').addClass('small-centered')
         $('.progress .meter').animate({width: '3%'})
 
   $.fn.fullpage.setAllowScrolling(false)
+
+Template.home.destroyed = ->
+  $.fn.fullpage.destroy()
 
 Template.home.events
   'click .get-start': (e, tpl) ->

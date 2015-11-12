@@ -4,11 +4,16 @@
     <div class="highlight small-3 columns">
       <a id="start-over" class="navbar-brand" href="{{pathFor 'home'}}"><i class="fa fa-arrow-left"></i> Start Over</a>
     </div>
-    <div class="small-6 columns text-center">
+    <div class="title small-6 columns text-center">
       COST TO MAKE AN APP
     </div>
     <div class="highlight small-3 columns text-right">
-      ${{total}}
+      <div class="estimate">
+        ${{total}}
+      </div>
+      <div class="share button tiny radius hide" data-clipboard-text="{{currentUrl}}">
+        GET LINK TO SAVE OR SHARE
+      </div>
     </div>
   </div>
 </nav>
@@ -16,22 +21,4 @@
 
 <template name="header_home">
   {{> header}}
-</template>
-
-<template name="header_result">
-<nav class="header full-width">
-  <div class="row">
-    <div class="highlight small-3 columns">
-      <a id="start-over" class="navbar-brand" href="{{pathFor 'home'}}"><i class="fa fa-arrow-left"></i> Start Over</a>
-    </div>
-    <div class="small-6 columns text-center">
-      COST TO MAKE AN APP
-    </div>
-    <div class="small-3 columns text-right">
-      <div class="button tiny radius hide" data-clipboard-text="{{currentUrl}}">
-        GET LINK TO SAVE OR SHARE
-      </div>
-    </div>
-  </div>
-</nav>
 </template>

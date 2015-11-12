@@ -1,3 +1,16 @@
+Template.header.rendered = ->
+  @clipboard = new Clipboard('.share.button')
+  @clipboard.on 'success', (e) ->
+    console.log 'Clipboard:', e.text
+
+    e.clearSelection()
+
+    Notifications.info 'Copied to Clipboard!', e.text,
+      timeout: 1000
+
+Template.header.destroyed = ->
+  @clipboard.destroy()
+
 Template.header.helpers
   total: () ->
     total = 0
@@ -64,6 +77,8 @@ Template.header.helpers
       );
 
     total
+  currentUrl: ->
+    window.location.href
 
 Template.header.events
   'click #start-over': (e, tpl) ->
@@ -82,17 +97,3 @@ Template.header.events
 Template.header_home.events
   'click #start-over': (e, tpl) ->
     $.fn.fullpage.silentMoveTo('home')
-
-Template.header_result.rendered = ->
-  clipboard = new Clipboard('.button')
-  clipboard.on 'success', (e) ->
-    console.log 'Clipboard:', e.text
-
-    e.clearSelection()
-
-    Notifications.info 'Copied to Clipboard!', e.text,
-      timeout: 1000
-
-Template.header_result.helpers
-  currentUrl: ->
-    Router && Router.current() && Router.current().url

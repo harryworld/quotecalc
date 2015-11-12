@@ -1,4 +1,7 @@
 Template.contact.rendered = ->
+  $('.header .estimate').addClass('hide')
+  $('.header .share').addClass('hide')
+
   $('form').validate
     rules:
       title:
@@ -20,10 +23,11 @@ Template.contact.rendered = ->
 Template.contact.helpers
   total: -> Session.get 'total'
   type: ->
-    switch @type
+    switch Session.get 'type'
       when 'ios' then 'Apple iOS'
       when 'android' then 'Android'
-      else 'Apple iOS and Android'
+      when 'ios_android' then 'Apple iOS and Android'
+      else 'disruptive mobile'
 
 Template.contact.events
   'submit form': (e, tpl) ->
