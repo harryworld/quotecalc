@@ -1,3 +1,22 @@
+Template.contact.rendered = ->
+  $('form').validate
+    rules:
+      title:
+        required: true
+      budget:
+        required: true
+        number: true
+        min: 0
+      detail:
+        required: true
+      first_name:
+        required: true
+      last_name:
+        required: false
+      email:
+        required: true
+        email: true
+
 Template.contact.helpers
   total: -> Session.get 'total'
   type: ->
