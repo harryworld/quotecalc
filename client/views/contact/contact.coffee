@@ -1,5 +1,10 @@
 Template.contact.helpers
   total: -> Session.get 'total'
+  type: ->
+    switch @type
+      when 'ios' then 'Apple iOS'
+      when 'android' then 'Android'
+      else 'Apple iOS and Android'
 
 Template.contact.events
   'submit form': (e, tpl) ->
