@@ -48,3 +48,23 @@
     @include side-radius(right, 8px);
   }
 }
+
+.contact-success {
+  padding: 10% 0;
+
+  h1, p {
+    color: #417505;
+  }
+
+  .content {
+    background-color: white;
+
+    .message {
+      > div {
+        background-color: #E0F1CF;
+        border-radius: 8px;
+        margin: 30px auto;
+      }
+    }
+  }
+}
