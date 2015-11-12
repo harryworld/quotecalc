@@ -28,6 +28,7 @@ fastclick@1.0.7
 fortawesome:fontawesome@4.4.0
 fourseven:scss@1.2.3
 geojson-utils@1.0.4
+gfk:notifications@1.1.4
 hot-code-push@1.0.0
 html-tools@1.0.5
 htmljs@1.0.5
@@ -43,7 +44,9 @@ iron:middleware-stack@1.0.11
 iron:router@1.0.12
 iron:url@1.0.11
 jquery@1.11.4
+keiths:octicons@1.2.2
 launch-screen@1.0.4
+less@2.5.1
 livedata@1.0.15
 logging@1.0.8
 matthew:foundation5-sass@1.0.0
@@ -80,3 +83,4 @@ underscore@1.0.4
 url@1.0.5
 webapp@1.2.3
 webapp-hashing@1.0.5
+zenorocha:clipboard@1.4.2

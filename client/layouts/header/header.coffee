@@ -82,3 +82,17 @@ Template.header.events
 Template.header_home.events
   'click #start-over': (e, tpl) ->
     $.fn.fullpage.silentMoveTo('home')
+
+Template.header_result.rendered = ->
+  clipboard = new Clipboard('.button')
+  clipboard.on 'success', (e) ->
+    console.log 'Clipboard:', e.text
+
+    e.clearSelection()
+
+    Notifications.info 'Copied to Clipboard!', e.text,
+      timeout: 1000
+
+Template.header_result.helpers
+  currentUrl: ->
+    Router && Router.current() && Router.current().url
