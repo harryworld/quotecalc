@@ -1,11 +1,20 @@
 <template name="profile">
-  <div class="home">
+  <div class="step-profile">
     <h1>Do people create personal profiles?</h1>
     <div>A profile means that some of the people that use your app will have to enter information about themselves that might be viewed publicly.</div>
-    <ul>
-      <li><a id="yes" href="/payment">Yes</a></li>
-      <li><a id="no" href="/payment">No</a></li>
-      <li><a id="unknown" href="/payment">I don't know</a></li>
-    </ul>
+    <div class="row">
+      <div class="small-4 columns">
+        <img class="yes" src="/images/Profile.png" />
+        <div class="yes">Yes</div>
+      </div>
+      <div class="small-4 columns">
+        <img class="no" src="/images/None.png" />
+        <div class="no">No</div>
+      </div>
+      <div class="small-4 columns">
+        <img class="unknown" src="/images/DontKnow.png" />
+        <div class="unknown">I don't know</div>
+      </div>
+    </div>
   </div>
 </template>

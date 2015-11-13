@@ -1,11 +1,20 @@
 <template name="rating">
-  <div class="home">
+  <div class="step-rating">
     <h1>Do people rate or review things?</h1>
     <div>Keep in mind, ranking systems can vary in complexity and thus impact your budget.</div>
-    <ul>
-      <li><a id="yes" href="/integration">Yes</a></li>
-      <li><a id="no" href="/integration">No</a></li>
-      <li><a id="unknown" href="/integration">I don't know</a></li>
-    </ul>
+    <div class="row">
+      <div class="small-4 columns">
+        <img class="yes" src="/images/Rate.png" />
+        <div class="yes">Yes</div>
+      </div>
+      <div class="small-4 columns">
+        <img class="no" src="/images/None.png" />
+        <div class="no">No</div>
+      </div>
+      <div class="small-4 columns">
+        <img class="unknown" src="/images/DontKnow.png" />
+        <div class="unknown">I don't know</div>
+      </div>
+    </div>
   </div>
 </template>

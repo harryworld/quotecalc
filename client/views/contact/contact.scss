@@ -1,0 +1,74 @@
+@import ".meteor/local/build/programs/server/assets/packages/matthew_foundation5-sass/scss/foundation/components/global";
+
+.contact {
+  padding: 10% 0;
+
+  > div {
+    background-color: white;
+
+    > .row {
+      padding: 0 2%;
+    }
+  }
+
+  .headline, .estimate {
+    padding: 20px;
+  }
+
+  .estimate {
+    border: 1px solid #EBEBEB;
+    border-radius: 8px;
+    height: 95px;
+
+    .price {
+      color: #417505;
+      font-size: 1.5em;
+    }
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea {
+    background-color: #F5F5F5 !important;
+  }
+
+  input[type="text"], textarea {
+    border-radius: 8px !important;
+  }
+
+  .prefix, .postfix {
+    background-color: #D8D8D8;
+  }
+
+  .prefix {
+    @include side-radius(left, 8px);
+  }
+
+  .postfix {
+    @include side-radius(right, 8px);
+  }
+}
+
+.contact-success {
+  padding: 10% 0;
+
+  h1, p {
+    color: #417505;
+  }
+
+  .content {
+    background-color: white;
+
+    .row {
+      margin: 30px auto;
+    }
+
+    .message {
+      > div {
+        background-color: #E0F1CF;
+        border-radius: 8px;
+        margin: 30px auto;
+      }
+    }
+  }
+}

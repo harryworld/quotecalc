@@ -1,3 +1,16 @@
+Template.header.rendered = ->
+  @clipboard = new Clipboard('.share.button')
+  @clipboard.on 'success', (e) ->
+    console.log 'Clipboard:', e.text
+
+    e.clearSelection()
+
+    Notifications.info 'Copied to Clipboard!', e.text,
+      timeout: 1000
+
+Template.header.destroyed = ->
+  @clipboard.destroy()
+
 Template.header.helpers
   total: () ->
     total = 0
@@ -58,8 +71,14 @@ Template.header.helpers
       total
 
     Session.set 'total', total
+    if Session.get 'resultId'
+      Choices.update(Session.get('resultId'), {$set: {total: Session.get 'total'}}, (error) ->
+        console.log error.reason if error
+      );
 
     total
+  currentUrl: ->
+    window.location.href
 
 Template.header.events
   'click #start-over': (e, tpl) ->
@@ -73,3 +92,8 @@ Template.header.events
       design: undefined
       appicon: undefined
       total: 0
+      resultId: undefined
+
+Template.header_home.events
+  'click #start-over': (e, tpl) ->
+    $.fn.fullpage.silentMoveTo('home')

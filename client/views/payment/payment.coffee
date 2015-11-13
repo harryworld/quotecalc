@@ -1,13 +1,26 @@
+navigate = () ->
+  if Session.get 'resultId'
+    Choices.update(Session.get('resultId'), {$set: {payment: Session.get 'payment'}}, (error) ->
+      console.log error.reason if error
+    );
+    Router.go 'result', {_id: Session.get('resultId')}
+  else
+    Router.go 'rating'
+
+Template.payment.rendered = ->
+  if $('.master').length
+    $('.progress .meter').animate({width: '50%'})
+
 Template.payment.events
-  'click #upfront': (e, tpl) ->
-    e.preventDefault()
+  'click .step-payment .upfront': (e, tpl) ->
     Session.set 'payment', 'upfront'
-    Router.go 'rating'
-  'click #inapp': (e, tpl) ->
-    e.preventDefault()
+    navigate()
+  'click .step-payment .inapp': (e, tpl) ->
     Session.set 'payment', 'inapp'
-    Router.go 'rating'
-  'click #free': (e, tpl) ->
-    e.preventDefault()
+    navigate()
+  'click .step-payment .free': (e, tpl) ->
     Session.set 'payment', 'free'
-    Router.go 'rating'
+    navigate()
+  'click .step-payment .unknown': (e, tpl) ->
+    Session.set 'payment', undefined
+    navigate()

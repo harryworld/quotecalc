@@ -1,0 +1,13 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.progress {
+  height: 1.2625rem !important;
+  padding: 0.025rem !important;
+
+  .meter-border {
+    border: 1px solid #8E65BC;
+  }
+}

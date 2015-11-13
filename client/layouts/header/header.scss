@@ -1,0 +1,16 @@
+nav {
+  position: fixed;
+  z-index: 999;
+
+  .highlight {
+    color: #3590FC;
+  }
+}
+
+li.notification {
+  &.info {
+    background-color: #E0F1CF;
+    border-radius: 8px;
+    color: #008CBA;
+  }
+}
