@@ -16,6 +16,7 @@ Template.home.rendered = ->
         $('.highlight').hide()
         $('.title').addClass('small-centered')
         $('.progress .meter').animate({width: '3%'})
+      ga('send', 'pageview', anchorLink)
 
   $.fn.fullpage.setAllowScrolling(false)
 

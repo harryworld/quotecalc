@@ -93,6 +93,7 @@ Template.header.events
       appicon: undefined
       total: 0
       resultId: undefined
+  ga('send', 'pageview', 'home');
 
 Template.header_home.events
   'click #start-over': (e, tpl) ->
