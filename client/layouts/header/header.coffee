@@ -9,7 +9,7 @@ Template.header.rendered = ->
       timeout: 1000
 
 Template.header.destroyed = ->
-  @clipboard.destroy()
+  @clipboard.destroy() if @clipboard
 
 Template.header.helpers
   total: () ->
@@ -93,6 +93,7 @@ Template.header.events
       appicon: undefined
       total: 0
       resultId: undefined
+  ga('send', 'pageview', 'home');
 
 Template.header_home.events
   'click #start-over': (e, tpl) ->
