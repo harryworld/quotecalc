@@ -9,7 +9,7 @@ Template.header.rendered = ->
       timeout: 1000
 
 Template.header.destroyed = ->
-  @clipboard.destroy()
+  @clipboard.destroy() if @clipboard
 
 Template.header.helpers
   total: () ->
