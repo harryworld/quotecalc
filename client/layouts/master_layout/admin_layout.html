@@ -1,0 +1,23 @@
+<template name="AdminLayout">
+  <nav class="top-bar" data-topbar role="navigation">
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="{{pathFor 'contactList'}}">Cost to Make an App</a></h1>
+      </li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <div class="right">
+        {{> loginButtons align="right"}}
+      </div>
+
+      <!-- Left Nav Section -->
+      <ul class="left">
+        <li><a href="{{pathFor 'contactList'}}">Contacts</a></li>
+      </ul>
+    </section>
+  </nav>
+  {{> errors}}
+  {{> yield}}
+</template>

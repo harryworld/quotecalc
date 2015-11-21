@@ -51,3 +51,22 @@ Router.route '/contact',
 Router.route '/success',
   name: 'success',
   layoutTemplate: 'ResultLayout'
+
+Router.route '/admin',
+  name: 'contactList',
+  layoutTemplate: 'AdminLayout'
+  waitOn: ->
+    Meteor.subscribe('contacts')
+  data: ->
+    Contacts.find()
+
+requireLogin = ->
+  unless Meteor.user()
+    if Meteor.loggingIn()
+      @render @.loadingTemplate
+    else
+      @render('accessDenied')
+  else
+    @next()
+
+Router.onBeforeAction(requireLogin, {only: 'contactList'})
